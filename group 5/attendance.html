@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      Arial,sans-serif
+      background-color ;
+    }
+    header {
+      background-color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header nav a {
+       
+      text-decoration none
+      color;
+    }
+    .search-bar input {
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .search-bar button {
+      padding: 6px 10px;
+      background-color: #198754;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      
+    }
+    .container {
+      padding: 30px;
+      max-width: 1200px;
+      
+      background-color: white;
+     
+      border-radius 
+     
+    }
+    h2 {
+      text-align: center;
+      ;
+    }
+    form {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+    }
+    .form-group {
+      
+    }
+    label {
+      display: block;
+      ;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+    .gender-group {
+      display: flex;
+      gap: 15px;
+    }
+    .form-group input[type="radio"] 
+      
+    
+    .form-group input:invalid {
+      border: 1px solid red;
+    }
+    .form-group input:valid {
+      border: 1px solid green;
+    }
+    .photo-upload {
+      text-align: center;
+    }
+    .photo-upload img {
+      width: 150px;
+      height: 150px;
+      background-color: #ccc;
+      border-radius: 50%;
+      ;
+    }
+    .btn-submit {
+      background-color: #198754;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      ;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>{Group No.}</h2>
+  <nav>
+    <a href=''>Students</a>
+    <a href=''>Attendance</a>
+    <a href=''>Form</a>
+  </nav>
+  <div class="search-bar">
+    <input type="text" placeholder="Search..." />
+    <button>Search</button>
+  </div>
+</header>
+
+<div class="container">
+  <h2>Add Student Form</h2>
+  <form>
+    <div class="left">
+      <div class="photo-upload">
+        <img src="https://via.placeholder.com/150" alt="Student Photo">
+        <input type="file" accept="image/*">
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="form-row">
+        <div class="form-group" style="flex: 1;">
+          <label>Last Name</label>
+          <input type="text" placeholder="ex. Juan" required>
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label>First Name</label>
+          <input type="text" placeholder="ex. Dela Cruz" required>
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label>Middle Name</label>
+          <input type="text" placeholder="ex. Cruz">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="gender-group">
+          <label><input type="radio" name="gender" required> Male</label>
+          <label><input type="radio" name="gender"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex: 1;">
+          <label>Civil Status</label>
+          <select required>
+            <option value="">Select</option>
+            <option value="Single" selected>Single</option>
+            <option value="Married">Married</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label>Date of Birth</label>
+          <input type="date" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex: 1;">
+          <label>Place of Birth</label>
+          <input type="text" placeholder="ex. Tarlac City" required>
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label>Nationality</label>
+          <input type="text" placeholder="ex. Filipino" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex: 1;">
+          <label>Religion</label>
+          <input type="text" placeholder="ex. Roman Catholic" required>
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label>Contact No.</label>
+          <input type="text" pattern="09[0-9]{9}" placeholder="09XXXXXXXXX" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="ex. JuanD@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label>Street</label>
+        <input type="text" placeholder="ex. 85th Subd." required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="flex: 1;">
+          <label>Barangay</label>
+          <input type="text" placeholder="ex. Sto. Rosario" required>
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label>City</label>
+          <input type="text" placeholder="ex. Capas" required>
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label>Province</label>
+          <input type="text" placeholder="ex. Tarlac" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Add Student</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
